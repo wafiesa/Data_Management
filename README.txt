@@ -1,6 +1,5 @@
-# This is Wafi Esa Git
-Wafi Esa respository Git tutorial
-This is an example respository for Git tutorial on https://www.w3schools.com
-
-This respository is built step by step in the tutorial.
-Now it includes steps for GitHub.
+Welcome to Wafi Esa's GitHub.
+Codes respository under branch Master is containing my data science portfolio projects.
+You can also contribute to my existing codes since I made this respository public.
+Feel free to reach me if you may find more efficient coding and let connect in this platform.
+Best wishes.
