@@ -86,6 +86,7 @@ Ultimately, 457 scheme name/areas are available from the portal and we can gener
 |2	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			     |2.350550 |102.103860  |2022-09-01					             |Freehold	  |1539.2377  |sq.ft	|828.9279		|210000           |
 |3	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN BELIMBING HARMONI  |2.335506	|102.266894 |2022-10-01						           |Leasehold	  |2497.2248  |sq.ft	|815.0425		|361111           |
 |4	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN VISTA BELIMBING	   |2.328142	|102.266958 |2022-01-01						           |Freehold	  |1377.7792	|sq.ft	|899.9697		|230000           |
+
 🔶 Insights: We have combined the latitude and longitute into the dataset_2022.csv and renamed it to melaka_terraced_property_sales_2022.csv.
 
 Now that the dataset has been processed to a desire format, let us explore the Melaka Property Sales Year 2022 by looking at the usefull statistics below.
