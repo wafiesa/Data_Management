@@ -137,6 +137,36 @@ Meanwhile leasehold residentials were recorded at 1237 transactions representing
 
 ![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png)
 
+Using latitude and longitude information, we can scatter plot using plotly.express package to visualize the approximate positions for every scheme name/area. Off course, the interactive features do not available here but by running the codes it is so much interesting. Your can obtain some of information when you hover the map.
+
+From the figure above, we can see that yellow circle represents higher transaction price and easy to locate on the map. The position of yellow circle represent most higher value transaction is located in Taman Residence Lapan, Melaka Tengah.
+
+Similarly, the most concentrated dots are located in Melaka Tengah as it is near to central business district (CBD). This followed by the Bandar Botani Parkland where it records 124 transactions in 2022.
+
 ![map_all_count.png](https://github.com/wafiesa/Codes/blob/master/map_all_count.png)
 
+Figure above shows the transactions count over the scheme name/area. It is contradictory with previous plot map since the most transactions count were outside Melaka Tengah.
 
+Specifically, the highest count was recorded at 154 transactions located in Taman Scientex (Bukit Tambun Perdana) in the proximity Durian Tunggal, Alor gajah.
+
+![map_1stry.png](https://github.com/wafiesa/Codes/blob/master/map_1stry.png)
+
+Figure above displays the locations for every single storey terraced sold in 2022. Ideally, Melaka Tengah seems to be very active in terms of populated dots on the map.  
+
+![map_1stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_1stry_count.png)
+
+However, records show that Jasin was attractive enough to pull homebuyers in 2022. The transactions count were recorded at 124 in Botani Parkland alone. Additionally, high value residential such Country Villa in Jasin was also contributing atleast 44 transactions.
+
+![map_2stry.png](https://github.com/wafiesa/Codes/blob/master/map_2stry.png)
+
+In 2022, 1085 units of double storey terraced were sold in Melaka. Although Taman Anggerik (Lot 71) in Melaka Tengah recorded the highest market value for double storey of RM390,000.00 but it has serious contender from Jasin which is Country Villas at RM380,000.00.     
+
+![map_2stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_2stry_count.png)
+
+#### Regression Analysis
+
+![distplot_price.png](https://github.com/wafiesa/Codes/blob/master/distplot_price.png)
+
+![distplot_build.png](https://github.com/wafiesa/Codes/blob/master/distplot_build.png)
+
+![MLR.png](https://github.com/wafiesa/Codes/blob/master/MLR.png)
