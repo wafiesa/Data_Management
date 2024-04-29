@@ -159,14 +159,33 @@ However, records show that Jasin was attractive enough to pull homebuyers in 202
 
 ![map_2stry.png](https://github.com/wafiesa/Codes/blob/master/map_2stry.png)
 
-In 2022, 1085 units of double storey terraced were sold in Melaka. Although Taman Anggerik (Lot 71) in Melaka Tengah recorded the highest market value for double storey of RM390,000.00 but it has serious contender from Jasin which is Country Villas at RM380,000.00.     
+In 2022, 1085 units of double storey terraced were sold in Melaka. Although Taman Anggerik (Lot 71) in Melaka Tengah recorded the highest market value for double storey of RM390,000.00 but it has serious contender from Jasin which is Country Villas at RM380,000.00. Both the residentials have almost identical build size of 1537.95 and 1471.75 respectively.     
 
 ![map_2stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_2stry_count.png)
 
+Nevertheless, Alor Gajah seems has stole a spotlight since the highest transactions count was recorded in Taman Scientex (Bukit Tambun Perdana). The new development in Alor Gajah has managed to attract homebuyers to settle in the district. 
+
+## 3. The Insights
+
 #### Regression Analysis
 
-![distplot_price.png](https://github.com/wafiesa/Codes/blob/master/distplot_price.png)
+![distplot_price.png](https://github.com/wafiesa/Codes/blob/master/distplot_price.png) ![distplot_build.png](https://github.com/wafiesa/Codes/blob/master/distplot_build.png)
 
-![distplot_build.png](https://github.com/wafiesa/Codes/blob/master/distplot_build.png)
+From the density plot above, we can observe that the price range for the transactions is concentrated between RM200,000.00 up to RM300,000.00. Now, this explains that the density for build size is in the region between 800 sq.ft to 900 sq.ft.
+
+The densities demonstrate that high purchase volume for the residential in the price range as well as the build size in concern. 
+
+Using linear regression model, we can determined the coefficient among dependend and independend variables. From the computation in sklearn.linear_model package, the results for the variables are as follows:
+
+Coefficient: [195.0251, 55.3691]
+Intercept: -12227.5884
+
+Thus, the regression can be represent as in the model below: 
 
 ![MLR.png](https://github.com/wafiesa/Codes/blob/master/MLR.png)
+
+## Recommendations
+
+
+
+## Conclusion
