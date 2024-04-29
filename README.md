@@ -93,6 +93,15 @@ Now that the dataset has been processed to a desire format, let us explore the M
 
 ##### Statistics
 
+![formatted_statistics.png](https://github.com/wafiesa/Codes/blob/master/formatted_statistics.png)
+
+From the statistics summary above, we can observe that there were 2870 transactions made in the year 2022. 
+
+The maximum transaction price was recorded at RM1.2 million while the minimum transaction price was clocked at RM90,000.00. The mean transaction price is RM302,953.82.
+
+Since the dataset represents single storey and double storey terraced houses, we can visualize the data accroding to each type of property.
+
+
 
 
 
