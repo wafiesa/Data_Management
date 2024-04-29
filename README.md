@@ -91,7 +91,7 @@ Ultimately, 457 scheme name/areas are available from the portal and we can gener
 
 Now that the dataset has been processed to a desire format, let us explore the Melaka Property Sales Year 2022 by looking at the usefull statistics below.
 
-## 2. Exploratary 
+## 2. Data Visualizations 
 
 ##### Statistics
 
@@ -103,13 +103,13 @@ The maximum transaction price was recorded at RM1.2 million while the minimum tr
 
 Since the dataset represents single storey and double storey terraced houses, we can visualize the data accroding to each type of property.
 
-![Boxplot_for_Transaction_Price.png](https://github.com/wafiesa/Codes/blob/master/Boxplot_for_Transaction_Price.png)
+![Boxplot_for_Transaction_Price.png](https://github.com/wafiesa/Codes/blob/master/Boxplots_For_Transaction_Price.png)
 
-The boxplots above illustrate the property types according to the districts. Furthermore, the boxplots also indicate the single storey terraced and double storey terraced houses by land status (tenure) of Freehold and Leasehold.
+The boxplots above illustrate the property types according to the districts. Furthermore, the boxplots also indicate the single storey terraced and double storey terraced houses by land status (tenure) for Freehold and Leasehold.
 
-The freehold land are usually more sort after since it allows the owner to keep the land forever meanwhile leaseholds are restricted for stipulated number of years for example 99 years.
+We can noticed that there are outliers it the boxplots but we want to retain it for visualization in the map.  
 
-However, this could not be the entire reason for landowner to decide their purchase since there were significant transactions recorded for leasehold units among the districts.
+
 
 
 
