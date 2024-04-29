@@ -103,11 +103,15 @@ The maximum transaction price was recorded at RM1.2 million while the minimum tr
 
 Since the dataset represents single storey and double storey terraced houses, we can visualize the data accroding to each type of property.
 
+##### Boxplots
+
 ![Boxplot_for_Transaction_Price.png](https://github.com/wafiesa/Codes/blob/master/Boxplots_For_Transaction_Price.png)
 
 The boxplots above illustrate the property types according to the districts. Furthermore, the boxplots also indicate the single storey terraced and double storey terraced houses by land status (tenure) for Freehold and Leasehold.
 
 We can noticed that there are outliers it the boxplots but we want to retain it for visualization in the map.  
+
+##### Heatmap
 
 ![Heatmap_District_Type.png](https://github.com/wafiesa/Codes/blob/master/Heatmap_District_Type.png)
 
@@ -128,6 +132,10 @@ From the heatmap of district versus tenure above we can observe that majority tr
 In the aspect of tenure, freehold property are more preferred with 1633 representing 854 units from Melaka Tengah, 468 units and 311 unit for Jasin. 
 
 Meanwhile leasehold residentials were recorded at 1237 transactions representing 761 units in Melaka Tengah, 256 units in Jasin and 220 units in Alor Gajah.
+
+##### Interactive Map
+
+![]()
 
 
 
