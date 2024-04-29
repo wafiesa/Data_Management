@@ -93,7 +93,7 @@ Now that the dataset has been processed to a desire format, let us explore the M
 
 ## 2. Data Visualizations 
 
-##### Statistics
+#### Statistics
 
 ![formatted_statistics.png](https://github.com/wafiesa/Codes/blob/master/formatted_statistics.png)
 
@@ -103,7 +103,7 @@ The maximum transaction price was recorded at RM1.2 million while the minimum tr
 
 Since the dataset represents single storey and double storey terraced houses, we can visualize the data accroding to each type of property.
 
-##### Boxplots
+#### Boxplots
 
 ![Boxplot_for_Transaction_Price.png](https://github.com/wafiesa/Codes/blob/master/Boxplots_For_Transaction_Price.png)
 
@@ -111,7 +111,7 @@ The boxplots above illustrate the property types according to the districts. Fur
 
 We can noticed that there are outliers it the boxplots but we want to retain it for visualization in the map.  
 
-##### Heatmap
+#### Heatmap
 
 ![Heatmap_District_Type.png](https://github.com/wafiesa/Codes/blob/master/Heatmap_District_Type.png)
 
@@ -133,9 +133,10 @@ In the aspect of tenure, freehold property are more preferred with 1633 represen
 
 Meanwhile leasehold residentials were recorded at 1237 transactions representing 761 units in Melaka Tengah, 256 units in Jasin and 220 units in Alor Gajah.
 
-##### Interactive Map
+#### Interactive Map
+
+![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png)
 
 ![]()
-
 
 
