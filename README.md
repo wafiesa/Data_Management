@@ -20,7 +20,7 @@ These two major residentials will be new offerings for future home buyers lookin
 ## Code and Resources Used
 
 * __Jupyter Notebook Version__: 6.5.4
-* __Packages__: pandas, numpy, scipy, matplotlib, seaborn, plotly express
+* __Packages__: pandas, numpy, scipy, matplotlib, seaborn, plotly express, sklearn
 * __Dataset Source__: https://napic2.jpph.gov.my/ms/data-transaksi?category=36&id=241
 
 ## Dataset Information
@@ -135,7 +135,7 @@ Meanwhile leasehold residentials were recorded at 1237 transactions representing
 
 #### Interactive Map
 
-![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png).<br>Hotspots for overall transactions. 
+![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png).<br>**Map 1: Hotspots for overall locations.** 
 
 Using latitude and longitude information, we can scatter plot using plotly.express package to visualize the approximate positions for every scheme name/area. Off course, the interactive features do not available here but by running the codes it is so much interesting. Your can obtain some of information when you hover the map.
 
@@ -143,25 +143,25 @@ From the figure above, we can see that yellow circle represents higher transacti
 
 Similarly, the most concentrated dots are located in Melaka Tengah as it is near to central business district (CBD). This followed by the Bandar Botani Parkland where it records 124 transactions in 2022.
 
-![map_all_count.png](https://github.com/wafiesa/Codes/blob/master/map_all_count.png)
+![map_all_count.png](https://github.com/wafiesa/Codes/blob/master/map_all_count.png).<br>**Map 2: Hotspots for transactions.** 
 
 Figure above shows the transactions count over the scheme name/area. It is contradictory with previous plot map since the most transactions count were outside Melaka Tengah.
 
 Specifically, the highest count was recorded at 154 transactions located in Taman Scientex (Bukit Tambun Perdana) in the proximity Durian Tunggal, Alor gajah.
 
-![map_1stry.png](https://github.com/wafiesa/Codes/blob/master/map_1stry.png)
+![map_1stry.png](https://github.com/wafiesa/Codes/blob/master/map_1stry.png).<br>**Map 3: Hotspots for single storey locations.**
 
 Figure above displays the locations for every single storey terraced sold in 2022. Ideally, Melaka Tengah seems to be very active in terms of populated dots on the map.  
 
-![map_1stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_1stry_count.png)
+![map_1stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_1stry_count.png)<br>**Map 4: Hotspots for single storey transactions.** 
 
 However, records show that Jasin was attractive enough to pull homebuyers in 2022. The transactions count were recorded at 124 in Botani Parkland alone. Additionally, high value residential such Country Villa in Jasin was also contributing atleast 44 transactions.
 
-![map_2stry.png](https://github.com/wafiesa/Codes/blob/master/map_2stry.png)
+![map_2stry.png](https://github.com/wafiesa/Codes/blob/master/map_2stry.png),<br>**Map 5: Hotspots for double storey locations.**
 
 In 2022, 1085 units of double storey terraced were sold in Melaka. Although Taman Anggerik (Lot 71) in Melaka Tengah recorded the highest market value for double storey of RM390,000.00 but it has serious contender from Jasin which is Country Villas at RM380,000.00. Both the residentials have almost identical build size of 1537.95 and 1471.75 respectively.     
 
-![map_2stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_2stry_count.png)
+![map_2stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_2stry_count.png).<br>**Map 6: Hotspots for double storey transactions.**
 
 Nevertheless, Alor Gajah seems has stole a spotlight since the highest transactions count was recorded in Taman Scientex (Bukit Tambun Perdana). The new development in Alor Gajah has managed to attract homebuyers to settle in the district. 
 
