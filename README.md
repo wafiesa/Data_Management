@@ -135,7 +135,7 @@ Meanwhile leasehold residentials were recorded at 1237 transactions representing
 
 #### Interactive Map
 
-![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png)
+![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png).<br>Hotspots for overall transactions. 
 
 Using latitude and longitude information, we can scatter plot using plotly.express package to visualize the approximate positions for every scheme name/area. Off course, the interactive features do not available here but by running the codes it is so much interesting. Your can obtain some of information when you hover the map.
 
