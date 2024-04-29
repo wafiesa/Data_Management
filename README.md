@@ -115,6 +115,8 @@ The heatmap above shows the comparisson between property types and the districts
 
 While sale transactions of double storey terraced sold in Melaka is recorded highest in Melaka Tengah at 646 units followed by Alor Gajah of 313 and Jasin of 96 units.
 
+![type_counts.png](https://github.com/wafiesa/Codes/blob/master/type_counts.png)
+
 Overall, single storey terraced houses were sold a total of 1815 units compared to 1055 units of double storey terraced houses.
 
 
