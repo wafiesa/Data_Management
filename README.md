@@ -53,13 +53,13 @@ Thus we can convert the Land Area and Main Floor Area to square feet (sq.ft). Al
 
 Additionally, we have set column 'Month, Year of Transaction Date' to a date column. 
 
-|	|Property Type				|District	|Mukim				 |Scheme Name/Area			 |Month, Year of Transaction Date	|Tenure		|Land Size	|Unit	|Build Size	|Transaction Price|
-|---|---------------------------|-----------|------------------- |---------------------------|----------------------------------|-----------|-----------|-------|-------------------|-----------------|
-|0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	         |2022-10-01	                    |Leasehold	|1539.2377  |sq.ft	|923.9731	        |200000           |
-|1	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	 |TAMAN BKT INDAH			 |2022-07-01							|Freehold	|1539.2377	|sq.ft	|824.9453			|173000			  |
-|2	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	 |TAMAN BKT INDAH			 |2022-09-01					|Freehold	|1539.2377  |sq.ft	|828.9279			|210000           |
-|3	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			 |TAMAN BELIMBING HARMONI	 |2022-10-01						|Leasehold	|2497.2248  |sq.ft	|815.0425			|361111           |
-|4	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			 |TAMAN VISTA BELIMBING	     |2022-01-01						|Freehold	|1377.7792	|sq.ft	|899.9697			|230000           |
+|	  |Property Type			        |District	  |Mukim				       |Scheme Name/Area			   |Month, Year of Transaction Date	|Tenure		  |Land Size	|Unit	  |Build Size	|Transaction Price|
+|---|---------------------------|-----------|------------------- |-------------------------|--------------------------------|-----------|-----------|-------|-----------|-----------------|
+|0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	         |2022-10-01	                    |Leasehold	|1539.2377  |sq.ft	|923.9731	  |200000           |
+|1	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			     |2022-07-01							        |Freehold	  |1539.2377	|sq.ft	|824.9453		|173000			      |
+|2	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			     |2022-09-01					            |Freehold	  |1539.2377  |sq.ft	|828.9279		|210000           |
+|3	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN BELIMBING HARMONI  |2022-10-01						          |Leasehold	|2497.2248  |sq.ft	|815.0425		|361111           |
+|4	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN VISTA BELIMBING	   |2022-01-01						          |Freehold	  |1377.7792	|sq.ft	|899.9697		|230000           |
 
 🔶 Insights: We have renamed a few columns and converted values for Land Size and Build Size to square feet measurement. 
 
@@ -69,10 +69,14 @@ Before an interactive map can be plotted, we must first obtain the approximate l
 
 Ultimately, 457 scheme name/areas are available from the portal and we can generate the positions. However, we need to combine latitude and longitude positions into the original dataset.
 
-|	|Scheme Name/Area			|Lat	    |Long		|
-|---|---------------------------|-----------|-----------|
-|0	|TAMAN SERI BAYU	        |2.384740   |102.212509 |
-|1	|TAMAN BKT INDAH			|2.350550	|102.103860 |
-|2	|TAMAN BKT INDAH			|2.350550   |102.103860 |
-|3	|TAMAN BELIMBING HARMONI	|2.335506	|102.266894 |
-|4	|TAMAN VISTA BELIMBING   	|2.328142	|102.266958 |
+|	  |Scheme Name/Area			  |Lat	    |Long		    |
+|---|-----------------------|---------|-----------|
+|0	|TAMAN SERI BAYU	      |2.384740 |102.212509 |
+|1	|TAMAN BKT INDAH			  |2.350550	|102.103860 |
+|2	|TAMAN BKT INDAH			  |2.350550 |102.103860 |
+|3	|TAMAN BELIMBING HARMONI|2.335506	|102.266894 |
+|4	|TAMAN VISTA BELIMBING  |2.328142	|102.266958 |
+
+##### Statistics
+
+
