@@ -119,9 +119,15 @@ While sale transactions of double storey terraced sold in Melaka is recorded hig
 
 Overall, single storey terraced houses were sold a total of 1815 units compared to 1055 units of double storey terraced houses.
 
+![Heatmap_District_Tenure](https://github.com/wafiesa/Codes/blob/master/Heatmap_District_Tenure.png)
 
+![district_count](https://github.com/wafiesa/Codes/blob/master/district_counts.png)
 
+From the heatmap of district versus tenure above we can observe that majority transactions were concenrated in Melaka Tengah district with 1615 units sold followed by Alor Gajah at 688 units and Jasin at 567 units.
 
+In the aspect of tenure, freehold property are more preferred with 1633 representing 854 units from Melaka Tengah, 468 units and 311 unit for Jasin. 
+
+Meanwhile leasehold residentials were recorded at 1237 transactions representing 761 units in Melaka Tengah, 256 units in Jasin and 220 units in Alor Gajah.
 
 
 
