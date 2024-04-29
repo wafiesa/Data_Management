@@ -35,17 +35,19 @@ In this part, we will begin our exploratory data analysis (EDA) by viewing the d
 
 #### Dataset overview
 
-|	|Property Type				|District	|Mukim				 |Scheme Name/Area			|Month, Year of Transaction Date	|Tenure		|Land Area	|Unit	|Main Floor Area	|Transaction Price|
-|---|---------------------------|-----------|------------------- |---------------------------|----------------------------------|-----------|-----------|-------|-------------------|-----------------|
-|0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	         |October 2022	                    |Leasehold	|143.0	    |sq.m	|85.84	            |200000           |
-|1	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	 |TAMAN BKT INDAH			 |July 2022							|Freehold	|143.0		|sq.m	|76.64				|173000			  |
-|2	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	 |TAMAN BKT INDAH			 |September 2022					|Freehold	|143.0	    |sq.m	|77.01				|210000           |
-|3	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			 |TAMAN BELIMBING HARMONI	 |October 2022						|Leasehold	|232.0	    |sq.m	|75.72				|361111           |
-|4	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			 |TAMAN VISTA BELIMBING	     |January 2022						|Freehold	|128.0	    |sq.m	|83.61				|230000           |
+|	  |Property Type				      |District	  |Mukim				       |Scheme Name/Area			  |Month, Year of Transaction Date	 |Tenure		 |Land Area	 |Unit	 |Main Floor Area	|Transaction Price|
+|---|---------------------------|-----------|------------------- |------------------------|----------------------------------|-----------|-----------|-------|-------------------|-----------------|
+|0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	        |October 2022	                     |Leasehold	 |143.0	     |sq.m	 |85.84	             |200000           |
+|1	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			    |July 2022							           |Freehold	 |143.0		   |sq.m	 |76.64				       |173000			     |
+|2	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			    |September 2022					           |Freehold	 |143.0	     |sq.m	 |77.01				       |210000           |
+|3	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN BELIMBING HARMONI	|October 2022						           |Leasehold	 |232.0	     |sq.m	 |75.72				       |361111           |
+|4	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN VISTA BELIMBING	  |January 2022						           |Freehold	 |128.0	     |sq.m	 |83.61				       |230000           |
 
 🔶 Insights: The data contains 2870 rows with 10 columns.  
 
 We can observe that the dataset_2022.csv gives us the information of property type, district, mukim, scheme name/area, month, year of transcation date, tenure, land area, unit, main floor area and transaction price. It is quite detailed for record of property transactions.
+
+#### Data Cleaning
 
 However, we notice that the dataset uses square meter (sq.meter) to represent the 'Land Area' and 'Main Floor Area'. Although this is sufficient to perform EDA but the most common nomenclature used in the market to represent the built size is in square feet measurement.
 
@@ -54,7 +56,7 @@ Thus we can convert the Land Area and Main Floor Area to square feet (sq.ft). Al
 Additionally, we have set column 'Month, Year of Transaction Date' to a date column. 
 
 |	  |Property Type			        |District	  |Mukim				       |Scheme Name/Area			   |Month, Year of Transaction Date	|Tenure		  |Land Size	|Unit	  |Build Size	|Transaction Price|
-|---|---------------------------|-----------|------------------- |-------------------------|--------------------------------|-----------|-----------|-------|-----------|-----------------|
+|---|---------------------------|-----------|--------------------|-------------------------|--------------------------------|-----------|-----------|-------|-----------|-----------------|
 |0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	         |2022-10-01	                    |Leasehold	|1539.2377  |sq.ft	|923.9731	  |200000           |
 |1	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			     |2022-07-01							        |Freehold	  |1539.2377	|sq.ft	|824.9453		|173000			      |
 |2	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			     |2022-09-01					            |Freehold	  |1539.2377  |sq.ft	|828.9279		|210000           |
@@ -67,8 +69,6 @@ Additionally, we have set column 'Month, Year of Transaction Date' to a date col
 
 Before an interactive map can be plotted, we must first obtain the approximate latitude and longitude positions for every scheme name/area. Since the dataset does not list the latitude and longitude positions, we can obtain the information from the portal postcode.my. The portal has an integration API with Google Maps.
 
-Ultimately, 457 scheme name/areas are available from the portal and we can generate the positions. However, we need to combine latitude and longitude positions into the original dataset.
-
 |	  |Scheme Name/Area			  |Lat	    |Long		    |
 |---|-----------------------|---------|-----------|
 |0	|TAMAN SERI BAYU	      |2.384740 |102.212509 |
@@ -77,6 +77,32 @@ Ultimately, 457 scheme name/areas are available from the portal and we can gener
 |3	|TAMAN BELIMBING HARMONI|2.335506	|102.266894 |
 |4	|TAMAN VISTA BELIMBING  |2.328142	|102.266958 |
 
+Ultimately, 457 scheme name/areas are available from the portal and we can generate the positions. However, we need to combine latitude and longitude positions into the original dataset.
+
+|	  |Property Type			        |District	  |Mukim				       |Scheme Name/Area			   |Lat       |Long       |Month, Year of Transaction Date |Tenure		  |Land Size	|Unit	  |Build Size	|Transaction Price|
+|---|---------------------------|-----------|--------------------|-------------------------|----------|-----------|--------------------------------|------------|-----------|-------|-----------|-----------------|
+|0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	         |2.384740  |102.212509 |2022-10-01	                     |Leasehold	  |1539.2377  |sq.ft	|923.9731	  |200000           |
+|1	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			     |2.350550	|102.103860 |2022-07-01							         |Freehold	  |1539.2377	|sq.ft	|824.9453		|173000			      |
+|2	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Masjid Tanah	   |TAMAN BKT INDAH			     |2.350550 |102.103860  |2022-09-01					             |Freehold	  |1539.2377  |sq.ft	|828.9279		|210000           |
+|3	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN BELIMBING HARMONI  |2.335506	|102.266894 |2022-10-01						           |Leasehold	  |2497.2248  |sq.ft	|815.0425		|361111           |
+|4	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Belimbing			     |TAMAN VISTA BELIMBING	   |2.328142	|102.266958 |2022-01-01						           |Freehold	  |1377.7792	|sq.ft	|899.9697		|230000           |
+
+🔶 Insights: We have combined the latitude and longitute into the dataset_2022.csv and renamed it to melaka_terraced_property_sales_2022.csv.
+
+Now that the dataset has been processed to a desire format, let us explore the Melaka Property Sales Year 2022 by looking at the usefull statistics below.
+
 ##### Statistics
+
+![formatted_statistics.png](https://github.com/wafiesa/Codes/blob/master/formatted_statistics.png)
+
+From the statistics summary above, we can observe that there were 2870 transactions made in the year 2022. 
+
+The maximum transaction price was recorded at RM1.2 million while the minimum transaction price was clocked at RM90,000.00. The mean transaction price is RM302,953.82.
+
+Since the dataset represents single storey and double storey terraced houses, we can visualize the data accroding to each type of property.
+
+
+
+
 
 
