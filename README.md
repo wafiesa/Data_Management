@@ -186,6 +186,30 @@ Thus, the regression can be represent as in the model below:
 
 ## Recommendations
 
+#### Utilize Interactive Map for Market Analysis
 
+Housing developers should leverage the interactive map to conduct in-depth market analysis by exploring transaction patterns, pricing trends, and demand hotspots across different scheme name/areas in Melaka. This will facilitate informed decision-making in formulating pricing strategies and identifying lucrative development opportunities.
+
+#### Monitor Future Development Projects 
+
+Given the anticipated growth momentum in Melaka's property market, it's crucial for developers to closely monitor upcoming development projects such as Melaka Waterfront Economic Zone (MWEZ) and Harbour City Melaka. These projects are expected to drive demand and reshape the landscape of the property market, presenting potential investment opportunities.
+
+#### Adapt Business Strategies
+
+Based on the insights derived from the interactive map and market analysis, housing developers should adapt their business strategies accordingly. This may involve diversifying product offerings, targeting specific customer segments, or adjusting pricing strategies to remain competitive in the dynamic market landscape.
+
+#### Enhance Customer Engagement
+
+The interactive map can also serve as a valuable tool for enhancing customer engagement and marketing efforts. Developers can leverage the map to provide potential buyers with detailed information about available properties, amenities, and surrounding infrastructure, thereby improving transparency and fostering trust with customers.
+
+#### Collaborate with Stakeholders
+
+Collaboration with local authorities, real estate agencies, and other stakeholders can further enhance the effectiveness of the interactive map and promote sustainable growth in the property market. By sharing data and insights, stakeholders can collectively address challenges, identify opportunities, and contribute to the overall development of Melaka's property sector.
 
 ## Conclusion
+
+In conclusion, the development of an interactive map for single and double storey terraced property sales in Melaka for the year 2022 offers valuable insights and opportunities for housing developers. With a comprehensive dataset covering transaction details, property attributes, and geographic information, developers can gain a deeper understanding of market dynamics and consumer preferences.
+
+The analysis revealed that Melaka's property market recorded significant transactions in 2022, with single and double storey terraced properties accounting for a substantial portion of the market activity. Key insights such as pricing trends, demand hotspots, and upcoming development projects provide developers with actionable information to formulate effective business strategies and capitalize on emerging opportunities.
+
+Moving forward, it is recommended that developers leverage the interactive map to conduct detailed market analysis, monitor future development projects, adapt business strategies, enhance customer engagement, and collaborate with stakeholders. By doing so, developers can navigate the evolving property landscape in Melaka and drive sustainable growth in the industry.
