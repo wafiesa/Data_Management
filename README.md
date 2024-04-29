@@ -137,6 +137,6 @@ Meanwhile leasehold residentials were recorded at 1237 transactions representing
 
 ![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png)
 
-![]()
+![map_all_count.png](https://github.com/wafiesa/Codes/blob/master/map_all_count.png)
 
 
