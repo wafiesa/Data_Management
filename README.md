@@ -109,7 +109,13 @@ The boxplots above illustrate the property types according to the districts. Fur
 
 We can noticed that there are outliers it the boxplots but we want to retain it for visualization in the map.  
 
+![Heatmap_District_Type.png](https://github.com/wafiesa/Codes/blob/master/Heatmap_District_Type.png)
 
+The heatmap above shows the comparisson between property types and the districts. Melaka Tengah sees more single storey terraced sold in 2022 at 969 units comparing to Jasin of 471 units while Alor Gajah of 375 units.
+
+While sale transactions of double storey terraced sold in Melaka is recorded highest in Melaka Tengah at 646 units followed by Alor Gajah of 313 and Jasin of 96 units.
+
+Overall, single storey terraced houses were sold a total of 1815 units compared to 1055 units of double storey terraced houses.
 
 
 
