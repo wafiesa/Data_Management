@@ -121,7 +121,7 @@ Overall, single storey terraced houses were sold a total of 1815 units compared 
 
 ![Heatmap_District_Tenure](https://github.com/wafiesa/Codes/blob/master/Heatmap_District_Tenure.png)
 
-![]()
+![district_count](https://github.com/wafiesa/Codes/blob/master/district_counts.png)
 
 From the heatmap of district versus tenure above we can observe that majority transactions were concenrated in Melaka Tengah district with 1615 units sold followed by Alor Gajah at 688 units and Jasin at 567 units.
 
