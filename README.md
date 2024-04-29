@@ -119,7 +119,7 @@ While sale transactions of double storey terraced sold in Melaka is recorded hig
 
 Overall, single storey terraced houses were sold a total of 1815 units compared to 1055 units of double storey terraced houses.
 
-
+![Heatmap_District_Tenure](https://github.com/wafiesa/Codes/blob/master/Heatmap_District_Tenure.png)
 
 
 
