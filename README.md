@@ -1,19 +1,18 @@
 # Interactive Map For Single and Double Storey Terraced Property Sale For 2022 In Melaka
 
 ## Project Overview 
-Given the current market dynamics, this project proposes the development of an interactive map that will provide comprehensive data on every single storey and double storey terraced property sold in Melaka in 2022. This unique tool will empower housing developers to formulate effective pricing and business strategies for future developments in Melaka.   
 
-Property sales for single and double storey terraced in Melaka recorded at RM869,477,476.00 with 2870 transactions in 2022. These transactions represent freehold and leasehold terraced houses covering 457 scheme name/areas located in 3 districts namely Melaka Tengah, Alor Gajah and Jasin.
+This project proposes the creation of an interactive map that will contain detailed information about all the single storey and double storey terraced properties sold in Melaka in 2022. The map will serve as a tool for housing developers to develop effective pricing and business strategies for future developments in Melaka, taking into account the current market dynamics.   
 
-The state’ property market is expected to continue its growth momentum with future developments projects are expected to create positive impact on the state’s property market such Melaka Waterfront Economic Zone (MWEZ) by 2035 and on-going contruction of Harbour City Melaka by Hatten Land Ltd.
+In 2022, a total of 2870 transactions were made for single storey and double storey terraced houses in Melaka. The property sales for these houses amounted to RM869,477,476.00. These transactions include both freehold and leasehold properties, and cover 457 areas or schemes located in three districts Melaka Tengah, Alor Gajah, and Jasin.
+
+The property market in the state is anticipated to maintain its upward trend, bolstered by the upcoming development projects. These include the Melaka Waterfront Economic Zone (MWEZ) with an expected completion date of 2035, and the ongoing construction of Harbour City Melaka by Hatten Land Ltd. These initiatives are set to have a positive impact on the state's property market.
 
 ![MWEZ.png](https://lh6.googleusercontent.com/u3S4EjKsun7Jt-ps9r-lcqcxqUaZU_ivDgh3LXEvsizJRh9AQ5GxMCVMOOpPoznHfpnCPnAHyP4jsPEH667fTL2Kq877bu0YduAXCWbptZ-6_uCgzvZhQ2We_Son0_FRQiFDOybG)
 
 ## Terraced Property Outlook
 
-Single and double storey terraced residentials will be the property segments to watch as Scientex Berhad had launched new project which is Scientex Durian Tunggal 2 on 202 acres land while Parkland Group had launched Bandar Botani Parkland in Jasin.
-
-These two major residentials will be new offerings for future home buyers looking for single or double storey terraced property in Melaka.
+The property market in Melaka is interesting to watch with the launch of two exciting residential projects: Scientex Durian Tunggal 2 and Bandar Botani Parkland. These developments, spanning 202 acres of land, offer single and double storey terraced homes, making them a prime choice for homebuyers seeking quality living spaces. Keep an eye on these segments, as they are likely to be in high demand in the near future.
 
 ![SCIENTEX.png](https://scientex.com.my/wp-content/uploads/2021/09/Aerial-View-Photo.jpeg)
 
@@ -45,16 +44,16 @@ In this part, we will begin our exploratory data analysis (EDA) by viewing the d
 
 🔶 Insights: The data contains 2870 rows with 10 columns.  
 
-We can observe that the dataset_2022.csv gives us the information of property type, district, mukim, scheme name/area, month, year of transcation date, tenure, land area, unit, main floor area and transaction price. It is quite detailed for record of property transactions.
+The dataset_2022.csv provides detailed information on property transactions, including property type, district, mukim, scheme name/area, transaction date (month and year), tenure, land area, unit, main floor area, and transaction price. This information is useful for exploratory analysis.
 
 #### Data Cleaning
 
-However, we notice that the dataset uses square meter (sq.meter) to represent the 'Land Area' and 'Main Floor Area'. Although this is sufficient to perform EDA but the most common nomenclature used in the market to represent the built size is in square feet measurement.
+We have observed that the dataset expresses the 'Land Area' and 'Main Floor Area' in square meters (sq. meter). Although it is sufficient for performing exploratory data analysis, it is worth noting that square feet measurement is the most commonly used nomenclature in the real estate market to represent the size of a property.
 
-Thus we can convert the Land Area and Main Floor Area to square feet (sq.ft). Also we can rename the Land Area to Land Size while the Main Floor Area to Build Size. 
+We have convert the Land Area and Main Floor Area into square feet (sq.ft). Furthermore, we can conveniently rename the Land Area to Land Size and the Main Floor Area to Build Size. 
 
-Additionally, we have set column 'Month, Year of Transaction Date' to a date column. 
-
+Moreover, we have successfully transformed the column 'Month, Year of Transaction Date' into a date column.
+ 
 |	  |Property Type			        |District	  |Mukim				       |Scheme Name/Area			   |Month, Year of Transaction Date	|Tenure		  |Land Size	|Unit	  |Build Size	|Transaction Price|
 |---|---------------------------|-----------|--------------------|-------------------------|--------------------------------|-----------|-----------|-------|-----------|-----------------|
 |0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	         |2022-10-01	                    |Leasehold	|1539.2377  |sq.ft	|923.9731	  |200000           |
@@ -67,7 +66,7 @@ Additionally, we have set column 'Month, Year of Transaction Date' to a date col
 
 #### Latitude and Longitude Positions
 
-Before an interactive map can be plotted, we must first obtain the approximate latitude and longitude positions for every scheme name/area. Since the dataset does not list the latitude and longitude positions, we can obtain the information from the portal postcode.my. The portal has an integration API with Google Maps.
+Before creating an interactive map, it is necessary to acquire the approximate latitude and longitude positions for each scheme name/area. As these positions are not included in the dataset, we can obtain them through the integration API between portal postcode.my and Google Maps.
 
 |	  |Scheme Name/Area			  |Lat	    |Long		    |
 |---|-----------------------|---------|-----------|
@@ -77,7 +76,7 @@ Before an interactive map can be plotted, we must first obtain the approximate l
 |3	|TAMAN BELIMBING HARMONI|2.335506	|102.266894 |
 |4	|TAMAN VISTA BELIMBING  |2.328142	|102.266958 |
 
-Ultimately, 457 scheme name/areas are available from the portal and we can generate the positions. However, we need to combine latitude and longitude positions into the original dataset.
+The portal provides access to 457 scheme names/areas, which can be leveraged to generate positions. However, the original dataset requires the integration of latitude and longitude positions to facilitate this process.
 
 |	  |Property Type			        |District	  |Mukim				       |Scheme Name/Area			   |Lat       |Long       |Month, Year of Transaction Date |Tenure		  |Land Size	|Unit	  |Build Size	|Transaction Price|
 |---|---------------------------|-----------|--------------------|-------------------------|----------|-----------|--------------------------------|------------|-----------|-------|-----------|-----------------|
@@ -89,7 +88,7 @@ Ultimately, 457 scheme name/areas are available from the portal and we can gener
 
 🔶 Insights: We have combined the latitude and longitute into the dataset_2022.csv and renamed it to melaka_terraced_property_sales_2022.csv.
 
-Now that the dataset has been processed to a desire format, let us explore the Melaka Property Sales Year 2022 by looking at the usefull statistics below.
+Let's explore Melaka Property Sales Year 2022 with useful statistics, now that the dataset has been processed to the desired format.
 
 ## 2. Data Visualizations 
 
