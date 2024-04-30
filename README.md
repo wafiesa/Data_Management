@@ -1,26 +1,25 @@
 # Interactive Map For Single and Double Storey Terraced Property Sale For 2022 In Melaka
 
 ## Project Overview 
-Given the current market dynamics, this project proposes the development of an interactive map that will provide comprehensive data on every single storey and double storey terraced property sold in Melaka in 2022. This unique tool will empower housing developers to formulate effective pricing and business strategies for future developments in Melaka.   
 
-Property sales for single and double storey terraced in Melaka recorded at RM869,477,476.00 with 2870 transactions in 2022. These transactions represent freehold and leasehold terraced houses covering 457 scheme name/areas located in 3 districts namely Melaka Tengah, Alor Gajah and Jasin.
+This project proposes the creation of an interactive map that will contain detailed information about all the single storey and double storey terraced properties sold in Melaka in 2022. The map will serve as a tool for housing developers to develop effective pricing and business strategies for future developments in Melaka, taking into account the current market dynamics.   
 
-The state’ property market is expected to continue its growth momentum with future developments projects are expected to create positive impact on the state’s property market such Melaka Waterfront Economic Zone (MWEZ) by 2035 and on-going contruction of Harbour City Melaka by Hatten Land Ltd.
+In 2022, a total of 2870 transactions were made for single storey and double storey terraced houses in Melaka. The property sales for these houses amounted to RM869,477,476.00. These transactions include both freehold and leasehold properties, and cover 457 areas or schemes located in three districts Melaka Tengah, Alor Gajah, and Jasin.
+
+The property market in the state is anticipated to maintain its upward trend, bolstered by the upcoming development projects. These include the Melaka Waterfront Economic Zone (MWEZ) with an expected completion date of 2035, and the ongoing construction of Harbour City Melaka by Hatten Land Ltd. These initiatives are set to have a positive impact on the state's property market.
 
 ![MWEZ.png](https://lh6.googleusercontent.com/u3S4EjKsun7Jt-ps9r-lcqcxqUaZU_ivDgh3LXEvsizJRh9AQ5GxMCVMOOpPoznHfpnCPnAHyP4jsPEH667fTL2Kq877bu0YduAXCWbptZ-6_uCgzvZhQ2We_Son0_FRQiFDOybG)
 
 ## Terraced Property Outlook
 
-Single and double storey terraced residentials will be the property segments to watch as Scientex Berhad had launched new project which is Scientex Durian Tunggal 2 on 202 acres land while Parkland Group had launched Bandar Botani Parkland in Jasin.
-
-These two major residentials will be new offerings for future home buyers looking for single or double storey terraced property in Melaka.
+The property market in Melaka is interesting to watch with the launch of two exciting residential projects: Scientex Durian Tunggal 2 and Bandar Botani Parkland. These developments, spanning 202 acres of land, offer single and double storey terraced homes, making them a prime choice for homebuyers seeking quality living spaces. Keep an eye on these segments, as they are likely to be in high demand in the near future.
 
 ![SCIENTEX.png](https://scientex.com.my/wp-content/uploads/2021/09/Aerial-View-Photo.jpeg)
 
 ## Code and Resources Used
 
 * __Jupyter Notebook Version__: 6.5.4
-* __Packages__: pandas, numpy, scipy, matplotlib, seaborn, plotly express
+* __Packages__: pandas, numpy, scipy, matplotlib, seaborn, plotly express, sklearn
 * __Dataset Source__: https://napic2.jpph.gov.my/ms/data-transaksi?category=36&id=241
 
 ## Dataset Information
@@ -45,16 +44,16 @@ In this part, we will begin our exploratory data analysis (EDA) by viewing the d
 
 🔶 Insights: The data contains 2870 rows with 10 columns.  
 
-We can observe that the dataset_2022.csv gives us the information of property type, district, mukim, scheme name/area, month, year of transcation date, tenure, land area, unit, main floor area and transaction price. It is quite detailed for record of property transactions.
+The dataset_2022.csv provides detailed information on property transactions, including property type, district, mukim, scheme name/area, transaction date (month and year), tenure, land area, unit, main floor area, and transaction price. This information is useful for exploratory analysis.
 
 #### Data Cleaning
 
-However, we notice that the dataset uses square meter (sq.meter) to represent the 'Land Area' and 'Main Floor Area'. Although this is sufficient to perform EDA but the most common nomenclature used in the market to represent the built size is in square feet measurement.
+We have observed that the dataset expresses the 'Land Area' and 'Main Floor Area' in square meters (sq. meter). Although it is sufficient for performing exploratory data analysis, it is worth noting that square feet measurement is the most commonly used nomenclature in the real estate market to represent the size of a property.
 
-Thus we can convert the Land Area and Main Floor Area to square feet (sq.ft). Also we can rename the Land Area to Land Size while the Main Floor Area to Build Size. 
+We have convert the Land Area and Main Floor Area into square feet (sq.ft). Furthermore, we can conveniently rename the Land Area to Land Size and the Main Floor Area to Build Size. 
 
-Additionally, we have set column 'Month, Year of Transaction Date' to a date column. 
-
+Moreover, we have successfully transformed the column 'Month, Year of Transaction Date' into a date column.
+ 
 |	  |Property Type			        |District	  |Mukim				       |Scheme Name/Area			   |Month, Year of Transaction Date	|Tenure		  |Land Size	|Unit	  |Build Size	|Transaction Price|
 |---|---------------------------|-----------|--------------------|-------------------------|--------------------------------|-----------|-----------|-------|-----------|-----------------|
 |0	|1 - 1 1/2 Storey Terraced	|Alor Gajah	|Bdr Alor Gajah	     |TAMAN SERI BAYU	         |2022-10-01	                    |Leasehold	|1539.2377  |sq.ft	|923.9731	  |200000           |
@@ -67,7 +66,7 @@ Additionally, we have set column 'Month, Year of Transaction Date' to a date col
 
 #### Latitude and Longitude Positions
 
-Before an interactive map can be plotted, we must first obtain the approximate latitude and longitude positions for every scheme name/area. Since the dataset does not list the latitude and longitude positions, we can obtain the information from the portal postcode.my. The portal has an integration API with Google Maps.
+Before creating an interactive map, it is necessary to acquire the approximate latitude and longitude positions for each scheme name/area. As these positions are not included in the dataset, we can obtain them through the integration API between portal postcode.my and Google Maps.
 
 |	  |Scheme Name/Area			  |Lat	    |Long		    |
 |---|-----------------------|---------|-----------|
@@ -77,7 +76,7 @@ Before an interactive map can be plotted, we must first obtain the approximate l
 |3	|TAMAN BELIMBING HARMONI|2.335506	|102.266894 |
 |4	|TAMAN VISTA BELIMBING  |2.328142	|102.266958 |
 
-Ultimately, 457 scheme name/areas are available from the portal and we can generate the positions. However, we need to combine latitude and longitude positions into the original dataset.
+The portal provides access to 457 scheme names/areas, which can be leveraged to generate positions. However, the original dataset requires the integration of latitude and longitude positions to facilitate this process.
 
 |	  |Property Type			        |District	  |Mukim				       |Scheme Name/Area			   |Lat       |Long       |Month, Year of Transaction Date |Tenure		  |Land Size	|Unit	  |Build Size	|Transaction Price|
 |---|---------------------------|-----------|--------------------|-------------------------|----------|-----------|--------------------------------|------------|-----------|-------|-----------|-----------------|
@@ -89,11 +88,11 @@ Ultimately, 457 scheme name/areas are available from the portal and we can gener
 
 🔶 Insights: We have combined the latitude and longitute into the dataset_2022.csv and renamed it to melaka_terraced_property_sales_2022.csv.
 
-Now that the dataset has been processed to a desire format, let us explore the Melaka Property Sales Year 2022 by looking at the usefull statistics below.
+Let's explore Melaka Property Sales Year 2022 with useful statistics, now that the dataset has been processed to the desired format.
 
 ## 2. Data Visualizations 
 
-##### Statistics
+#### Statistics
 
 ![formatted_statistics.png](https://github.com/wafiesa/Codes/blob/master/formatted_statistics.png)
 
@@ -103,11 +102,15 @@ The maximum transaction price was recorded at RM1.2 million while the minimum tr
 
 Since the dataset represents single storey and double storey terraced houses, we can visualize the data accroding to each type of property.
 
+#### Boxplots
+
 ![Boxplot_for_Transaction_Price.png](https://github.com/wafiesa/Codes/blob/master/Boxplots_For_Transaction_Price.png)
 
 The boxplots above illustrate the property types according to the districts. Furthermore, the boxplots also indicate the single storey terraced and double storey terraced houses by land status (tenure) for Freehold and Leasehold.
 
 We can noticed that there are outliers it the boxplots but we want to retain it for visualization in the map.  
+
+#### Heatmap
 
 ![Heatmap_District_Type.png](https://github.com/wafiesa/Codes/blob/master/Heatmap_District_Type.png)
 
@@ -129,5 +132,83 @@ In the aspect of tenure, freehold property are more preferred with 1633 represen
 
 Meanwhile leasehold residentials were recorded at 1237 transactions representing 761 units in Melaka Tengah, 256 units in Jasin and 220 units in Alor Gajah.
 
+#### Interactive Map
 
+![map_all.png](https://github.com/wafiesa/Codes/blob/master/map_all.png).<br>**Map 1: Hotspots for overall locations.** 
 
+Using latitude and longitude information, we can scatter plot using plotly.express package to visualize the approximate positions for every scheme name/area. Off course, the interactive features do not available here but by running the codes it is so much interesting. Your can obtain some of information when you hover the map.
+
+From the figure above, we can see that yellow circle represents higher transaction price and easy to locate on the map. The position of yellow circle represent most higher value transaction is located in Taman Residence Lapan, Melaka Tengah.
+
+Similarly, the most concentrated dots are located in Melaka Tengah as it is near to central business district (CBD). This followed by the Bandar Botani Parkland where it records 124 transactions in 2022.
+
+![map_all_count.png](https://github.com/wafiesa/Codes/blob/master/map_all_count.png).<br>**Map 2: Hotspots for transactions.** 
+
+Figure above shows the transactions count over the scheme name/area. It is contradictory with previous plot map since the most transactions count were outside Melaka Tengah.
+
+Specifically, the highest count was recorded at 154 transactions located in Taman Scientex (Bukit Tambun Perdana) in the proximity Durian Tunggal, Alor gajah.
+
+![map_1stry.png](https://github.com/wafiesa/Codes/blob/master/map_1stry.png).<br>**Map 3: Hotspots for single storey locations.**
+
+Figure above displays the locations for every single storey terraced sold in 2022. Ideally, Melaka Tengah seems to be very active in terms of populated dots on the map.  
+
+![map_1stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_1stry_count.png)<br>**Map 4: Hotspots for single storey transactions.** 
+
+However, records show that Jasin was attractive enough to pull homebuyers in 2022. The transactions count were recorded at 124 in Botani Parkland alone. Additionally, high value residential such Country Villa in Jasin was also contributing atleast 44 transactions.
+
+![map_2stry.png](https://github.com/wafiesa/Codes/blob/master/map_2stry.png),<br>**Map 5: Hotspots for double storey locations.**
+
+In 2022, 1085 units of double storey terraced were sold in Melaka. Although Taman Anggerik (Lot 71) in Melaka Tengah recorded the highest market value for double storey of RM390,000.00 but it has serious contender from Jasin which is Country Villas at RM380,000.00. Both the residentials have almost identical build size of 1537.95 and 1471.75 respectively.     
+
+![map_2stry_count.png](https://github.com/wafiesa/Codes/blob/master/map_2stry_count.png).<br>**Map 6: Hotspots for double storey transactions.**
+
+Nevertheless, Alor Gajah seems has stole a spotlight since the highest transactions count was recorded in Taman Scientex (Bukit Tambun Perdana). The new development in Alor Gajah has managed to attract homebuyers to settle in the district. 
+
+## 3. The Insights
+
+#### Regression Analysis
+
+![distplot_price.png](https://github.com/wafiesa/Codes/blob/master/distplot_price.png) ![distplot_build.png](https://github.com/wafiesa/Codes/blob/master/distplot_build.png)
+
+From the density plot above, we can observe that the price range for the transactions is concentrated between RM200,000.00 up to RM300,000.00. Now, this explains that the density for build size is in the region between 800 sq.ft to 900 sq.ft.
+
+The densities demonstrate that high purchase volume for the residential in the price range as well as the build size in concern. 
+
+Using linear regression model, we can determined the coefficient among dependend and independend variables. From the computation in sklearn.linear_model package, the results for the variables are as follows:
+
+Coefficient: [195.0251, 55.3691]
+Intercept: -12227.5884
+
+Thus, the regression can be represent as in the model below: 
+
+![MLR.png](https://github.com/wafiesa/Codes/blob/master/MLR.png)
+
+## Recommendations
+
+#### Utilize Interactive Map for Market Analysis
+
+Housing developers should leverage the interactive map to conduct in-depth market analysis by exploring transaction patterns, pricing trends and demand hotspots across different scheme name/areas in Melaka. This will facilitate informed decision-making in formulating pricing strategies and identifying lucrative development opportunities.
+
+#### Monitor Future Development Projects 
+
+Given the anticipated growth momentum in Melaka's property market, it's crucial for developers to closely monitor upcoming development projects such as Melaka Waterfront Economic Zone (MWEZ) and Harbour City Melaka. These projects are expected to drive demand and reshape the landscape of the property market, presenting potential investment opportunities.
+
+#### Adapt Business Strategies
+
+Based on the insights derived from the interactive map and market analysis, housing developers should adapt their business strategies accordingly. This may involve diversifying product offerings, targeting specific customer segments, or adjusting pricing strategies to remain competitive in the dynamic market landscape.
+
+#### Enhance Customer Engagement
+
+The interactive map can also serve as a valuable tool for enhancing customer engagement and marketing efforts. Developers can leverage the map to provide potential buyers with detailed information about available properties, amenities and surrounding infrastructure, thereby improving transparency and fostering trust with customers.
+
+#### Collaborate with Stakeholders
+
+Collaboration with local authorities, real estate agencies and other stakeholders can further enhance the effectiveness of the interactive map and promote sustainable growth in the property market. By sharing data and insights, stakeholders can collectively address challenges, identify opportunities and contribute to the overall development of Melaka's property sector.
+
+## Conclusion
+
+In conclusion, the development of an interactive map for single and double storey terraced property sales in Melaka for the year 2022 offers valuable insights and opportunities for housing developers. A comprehensive dataset covering transaction details, property attributes and geographic information, developers can gain a deeper understanding of market dynamics and consumer preferences.
+
+The analysis revealed that Melaka's property market recorded significant transactions in 2022, with single and double storey terraced properties accounting for a substantial portion of the market activity. Key insights such as pricing trends, demand hotspots and upcoming development projects provide developers with actionable information to formulate effective business strategies and capitalize on emerging opportunities.
+
+Moving forward, it is recommended that developers leverage the interactive map to conduct detailed market analysis, monitor future development projects, adapt business strategies, enhance customer engagement and collaborate with stakeholders. By doing so, developers can navigate the evolving property landscape in Melaka and drive sustainable growth in the industry.
