@@ -179,7 +179,7 @@ Using linear regression model, we can determined the coefficient among dependend
 Coefficient: [195.0251, 55.3691]
 Intercept: -12227.5884
 
-Thus, the regression can be represent as in the model below: 
+Thus, the regression can be represented as in the model below: 
 
 ![MLR.png](https://github.com/wafiesa/Codes/blob/master/MLR.png)
 
